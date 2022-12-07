@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/auth/', include('authentication.urls')),
-    path('api/cars/', include('cars.urls')),
-    path('api/properties/', include('properties.urls')),
-    path('api/photos/', include('photos.urls'))
+    path('', views.property_library ),
+    path('<int:pk>', views.get_property_by_id )
 ]
