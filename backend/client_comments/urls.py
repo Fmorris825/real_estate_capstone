@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/auth/', include('authentication.urls')),
-    path('api/cars/', include('cars.urls')),
-    path('api/properties/', include('properties.urls')),
-    path('api/photos/', include('photos.urls'))
-    path('api/photos/', include('client_comments.urls'))
+    path('', views.client_comment_library ),
+    path('<int:pk>', views.get_client_comment_by_id )
 ]
