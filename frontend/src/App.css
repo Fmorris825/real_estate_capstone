@@ -56,3 +56,17 @@ button:hover {
   padding: 3px 7px;
   font-size: 17px;
 }
+
+h4 {
+  border-bottom: 5px solid black;
+  border-radius: 3px;
+}
+
+hr {
+  height: 5px;
+  background-color: black;
+  border: 0;
+  width: 90%;
+  margin: 50px auto;
+  border-radius: 2px;
+}

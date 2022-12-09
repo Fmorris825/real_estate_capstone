@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
+import RealtorsContainer from "../../components/RealtorsContainer/RealtorsContainer";
+import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
+import PropertyCarousel from "../../components/PropertyCarousel/PropertyCarousel";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -27,14 +30,14 @@ const HomePage = () => {
     fetchCars();
   }, [token]);
   return (
-    <div className="container">
-      <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
-          </p>
-        ))}
+    <div>
+      <h1>Morris Delta Realty</h1>
+      <h3>Its a family thing,</h3>
+      <RealtorsContainer />
+      <hr />
+      <GoogleMapsContainer />
+      <hr />
+      <PropertyCarousel />
     </div>
   );
 };
