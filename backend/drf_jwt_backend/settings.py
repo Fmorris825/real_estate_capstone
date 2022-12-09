@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'photos',
     'properties',
+    'client_comments',
     'cars.apps.CarsConfig'  # This app is for example use only
 ]
 

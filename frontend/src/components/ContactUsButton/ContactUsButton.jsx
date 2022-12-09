@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import ContactUsForm from "../ContactUsForm/ContactUsForm";
 
 import "./ContactUsButton.css";
 
@@ -23,8 +24,7 @@ const ContactUsButton = () => {
           <h6>Contact Us</h6>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <ContactUsForm />
         </Offcanvas.Body>
       </Offcanvas>
     </>
