@@ -8,16 +8,17 @@ import {
   FormGroup,
   Container,
 } from "react-bootstrap";
-import Alert from "react-bootstrap/Alert";
 
 import axios from "axios";
+import CommentAlert from "../CommentAlert/CommentAlert";
 
 const ContactUsForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [inquiry, setInquiry] = useState("");
-  const [show, setShow] = useState(true);
+
+  const [show, setShow] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,58 +41,38 @@ const ContactUsForm = () => {
       newInquiry
     );
     if (response.status === 201) {
-      if (show) {
-        return (
-          <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-            <Alert.Heading>Thank you</Alert.Heading>
-            <p>
-              Your inquiry has been successfully submitted. We look forward to
-              answering your inquiry and will respond at our next availabel
-              moment. -Thank you !
-            </p>
-          </Alert>
-        );
-      }
-      return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+      setShow(true);
+      // await getAllInquiry();
     }
-    // await getAllInquiry();
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <FormGroup>
+    <div>
+      <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <div>
+          <FormGroup>
             <FormLabel>First Name:</FormLabel>
-          </div>
 
-          <div>
             <FormControl
               className="shadow-sm p-1 mb-1 bg-body rounded"
               type="text"
               onChange={(event) => setFirstName(event.target.value)}
               value={firstName}
             />
-          </div>
-        </FormGroup>
-        <FormGroup>
-          <div>
+          </FormGroup>
+          <FormGroup>
             <FormLabel>Last Name:</FormLabel>
-          </div>
-          <div>
+
             <FormControl
               className="shadow-sm p-1 mb-1 bg-body rounded"
               type="text"
               onChange={(event) => setLastName(event.target.value)}
               value={lastName}
             />
-          </div>
-        </FormGroup>
-        <FormGroup>
-          <div>
+          </FormGroup>
+          <FormGroup>
             <FormLabel>Email:</FormLabel>
-          </div>
-          <div>
+
             <FormControl
               className="shadow-sm p-1 mb-1 bg-body rounded"
               type="email"
@@ -102,28 +83,26 @@ const ContactUsForm = () => {
               We will not use this email for unwanted promotions and contact,
               only to repsond to your inquiry.
             </Form.Text>
-          </div>
-        </FormGroup>
-        <FormGroup>
-          <div>
+          </FormGroup>
+          <FormGroup>
             <FormLabel>Inquiry:</FormLabel>
-          </div>
-          <div>
+
             <FormControl
               className="shadow-sm p-1 mb-1 bg-body rounded"
               type="text"
               onChange={(event) => setInquiry(event.target.value)}
               value={inquiry}
             />
-          </div>
+          </FormGroup>
         </FormGroup>
-      </FormGroup>
-      <Container>
-        <Button id="button" type="submit">
-          Submit
-        </Button>
-      </Container>
-    </Form>
+        <Container>
+          <Button id="button" type="submit">
+            Submit
+          </Button>
+        </Container>
+      </Form>
+      <CommentAlert show={show} setShow={setShow} />
+    </div>
   );
 };
 
