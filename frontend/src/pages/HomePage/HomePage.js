@@ -6,6 +6,7 @@ import axios from "axios";
 import RealtorsContainer from "../../components/RealtorsContainer/RealtorsContainer";
 import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
 import PropertyCarousel from "../../components/PropertyCarousel/PropertyCarousel";
+import Banner from "../../components/Banner/Banner";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -31,8 +32,7 @@ const HomePage = () => {
   }, [token]);
   return (
     <div>
-      <h1>Morris Delta Realty</h1>
-      <h3>Its a family thing,</h3>
+      <Banner />
       <RealtorsContainer />
       <hr />
       <GoogleMapsContainer />
