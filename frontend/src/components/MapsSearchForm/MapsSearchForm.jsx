@@ -4,15 +4,13 @@ import FormLabel from "react-bootstrap/esm/FormLabel";
 import FormControl from "react-bootstrap/esm/FormControl";
 import FormGroup from "react-bootstrap/esm/FormGroup";
 
-import { GoogleMaps } from "@react-google-maps/api";
-
 const MapsSearchForm = ({ setQuery }) => {
   const [tempQuery, setTempQuery] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
     setQuery(tempQuery);
-    setTempQuery("");
+    // setTempQuery("");
   }
 
   return (

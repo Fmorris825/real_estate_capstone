@@ -17,7 +17,7 @@ const PropertyCarousel = () => {
     const response = await axios.get("http://127.0.0.1:8000/api/properties/");
     setProperties(response.data);
   }
-  console.log(properties);
+
   if (!properties) return null;
   return (
     <div className="d-flex justify-content-center">
