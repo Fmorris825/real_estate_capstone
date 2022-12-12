@@ -1,0 +1,33 @@
+.propertycards {
+  box-shadow: 10px 10px 5px lightgray;
+  width: 600px;
+  border-top: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  color: darkgrey;
+}
+
+.propertycards:hover {
+  box-shadow: 10px 10px 5px grey;
+  background-color: #e0e0e0;
+  color: #404040;
+}
+
+.cardimg {
+  width: 300px;
+  height: 200px;
+  margin: 15px;
+  box-shadow: 10px 10px 5px lightgray;
+}
+
+.carddesc {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cardaddress {
+  font-size: 24px;
+}
+
+.cardinfo {
+  margin: 15px;
+}

@@ -26,7 +26,7 @@ const PropertyCarousel = () => {
           return (
             <CarouselItem>
               <img
-                className="d-block w-100 h-100"
+                className="carouselitem d-block w-100"
                 src={property.photo.photo_url}
                 alt={property.address}
               />

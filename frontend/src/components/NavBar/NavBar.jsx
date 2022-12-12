@@ -17,6 +17,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   return (
     <Navbar
+      sticky="top"
       collapseOnSelect
       expand="lg"
       bg="dark"

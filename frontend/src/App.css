@@ -70,3 +70,7 @@ hr {
   margin: 50px auto;
   border-radius: 2px;
 }
+
+.shadow {
+  box-shadow: 10px 10px 5px lightgray;
+}
