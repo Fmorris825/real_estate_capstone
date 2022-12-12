@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import NavbarBrand from "react-bootstrap/esm/NavbarBrand";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 import "./NavBar.css";
 import ContactUsButton from "../ContactUsButton/ContactUsButton";
@@ -28,6 +29,14 @@ const NavBar = () => {
       <NavbarToggle aria-controls="responsive-navbar-nav" />
       <NavbarCollapse id="responsive-navbar-nav">
         <Nav className="me-auto">
+          <NavDropdown
+            id="nav-dropdown-dark-example"
+            title="Realtors"
+            menuVariant="dark"
+          >
+            <Link to="realtors/sophiamorris">Sophia Morris</Link>
+            <Link href="realtors/davidvernon">David Vernon</Link>
+          </NavDropdown>
           <Link className="p-1" to="realtors">
             Realtor's
           </Link>

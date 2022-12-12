@@ -16,6 +16,8 @@ import Footer from "./components/Footer/Footer";
 import PrivateRoute from "./utils/PrivateRoute";
 import RealtorsPage from "./components/RealtorsPage/RealtorsPage";
 import PropertiesPage from "./components/PropertiesPage/PropertiesPage";
+import SophiaMorrisPage from "./components/SophiaMorrisPage/SophiaMorrisPage";
+import DavidVernonPage from "./components/DavidVernonPage/DavidVernonPage";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/realtors" element={<RealtorsPage />} />
+        <Route path="/realtors/sophiamorris" element={<SophiaMorrisPage />} />
+        <Route path="/realtors/davidvernon" element={<DavidVernonPage />} />
         <Route path="/properties" element={<PropertiesPage />} />
       </Routes>
       <Footer />
