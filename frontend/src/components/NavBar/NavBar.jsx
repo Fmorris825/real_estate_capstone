@@ -34,12 +34,16 @@ const NavBar = () => {
             title="Realtors"
             menuVariant="dark"
           >
-            <Link to="realtors/sophiamorris">Sophia Morris</Link>
-            <Link href="realtors/davidvernon">David Vernon</Link>
+            <NavDropdown.Item>
+              <Link to="realtors">All Realtors</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="realtors/sophiamorris">Sophia Morris</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="realtors/davidvernon">David Vernon</Link>
+            </NavDropdown.Item>
           </NavDropdown>
-          <Link className="p-1" to="realtors">
-            Realtor's
-          </Link>
           <Link className="p-1" to="properties">
             Properties
           </Link>
