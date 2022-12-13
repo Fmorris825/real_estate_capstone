@@ -2,12 +2,14 @@ import React, { useState, useEffect, useSyncExternalStore } from "react";
 import PropertyCarousel from "../PropertyCarousel/PropertyCarousel";
 import axios from "axios";
 import "./PropertiesPage.css";
-import { Row } from "react-bootstrap";
 import PropertyList from "../PropertyList/PropertyList";
+import PropertyViewer from "../PropertyViewer/PropertyViewer";
+import { Container } from "react-bootstrap";
 
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
   const [selectedProperty, setSelectedProperty] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState(false);
 
   useEffect(() => {
     getProperties();
@@ -22,10 +24,16 @@ const PropertiesPage = () => {
   console.log(selectedProperty);
 
   return selectedProperty ? (
-    <div>
+    <div className="d-flex flex-column align-items-center">
+      <PropertyViewer
+        selectedProperty={selectedProperty}
+        setSelectedPhoto={setSelectedPhoto}
+        selectedPhoto={selectedPhoto}
+      />
       <PropertyList
         properties={properties}
         setSelectedProperty={setSelectedProperty}
+        setSelectedPhoto={setSelectedPhoto}
       />
     </div>
   ) : (

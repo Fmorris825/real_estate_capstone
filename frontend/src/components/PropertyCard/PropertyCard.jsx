@@ -1,12 +1,13 @@
 import React from "react";
 
-const PropertyCard = ({ property, setSelectedProperty }) => {
+const PropertyCard = ({ property, setSelectedProperty, setSelectedPhoto }) => {
   function handleSelection() {
     setSelectedProperty(property);
+    setSelectedPhoto(false);
   }
 
   return (
-    <div className="d-flex propertycards" onClick={handleSelection}>
+    <div className="d-flex m-3 propertycards" onClick={handleSelection}>
       <img
         className="cardimg"
         src={property.photo_url}

@@ -23,7 +23,7 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      className="p-3"
+      className="navBar"
     >
       <NavbarBrand href="/">Morris Delta Realty</NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav" />
@@ -35,25 +35,37 @@ const NavBar = () => {
             menuVariant="dark"
           >
             <NavDropdown.Item>
-              <Link to="realtors">All Realtors</Link>
+              <Link className="link" to="realtors">
+                All Realtors
+              </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <Link to="realtors/sophiamorris">Sophia Morris</Link>
+              <Link className="link" to="realtors/sophiamorris">
+                Sophia Morris
+              </Link>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <Link to="realtors/davidvernon">David Vernon</Link>
+              <Link className="link" to="realtors/davidvernon">
+                David Vernon
+              </Link>
             </NavDropdown.Item>
           </NavDropdown>
-          <Link className="p-1" to="properties">
-            Properties
-          </Link>
+          <Nav.Link>
+            <Link className="p-1 link" to="properties">
+              Properties
+            </Link>
+          </Nav.Link>
         </Nav>
         <ContactUsButton />
         <Nav>
           {user ? (
-            <button onClick={logoutUser}>Logout</button>
+            <button className="navbutton" onClick={logoutUser}>
+              Logout
+            </button>
           ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
+            <button className="navbutton" onClick={() => navigate("/login")}>
+              Login
+            </button>
           )}
         </Nav>
       </NavbarCollapse>

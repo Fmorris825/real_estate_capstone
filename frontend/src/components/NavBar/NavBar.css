@@ -12,7 +12,6 @@ li {
   background: steelblue;
   box-shadow: 4px 2px 5px gray;
   color: white;
-  margin-bottom: 2rem;
   padding: 1.5rem 2rem;
 }
 
@@ -20,7 +19,6 @@ li {
   background: transparent;
   border: 2px solid white;
   color: white;
-  padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
@@ -32,4 +30,18 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: gray;
+}
+
+.link:hover {
+  color: white;
+}
+
+.navbutton {
+  margin-left: 10px;
+  margin-right: 10px;
 }

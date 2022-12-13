@@ -1,9 +1,9 @@
 .propertycards {
   box-shadow: 10px 10px 5px lightgray;
   width: 600px;
-  border-top: 1px solid lightgrey;
-  border-left: 1px solid lightgrey;
+  border: 1px solid lightgrey;
   color: darkgrey;
+  border-radius: 5px;
 }
 
 .propertycards:hover {

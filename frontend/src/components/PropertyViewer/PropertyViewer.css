@@ -1,0 +1,12 @@
+.thumbnails {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.propertyViewer {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px lightgray;
+  margin: 35px;
+}
