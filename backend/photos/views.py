@@ -4,20 +4,22 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import PhotoSerializer
 from .models import Photo
+from properties.models import Property
 
 # Create your views here.
 
 
 @api_view(['GET', 'POST'])
-def photo_library(request):
+def photo_library(request,pk):
+    property = Property.objects.get(id=pk)
     if request.method == 'GET':
-        photos = Photo.objects.all()
+        photos = Photo.objects.filter(property=property)
         serializer = PhotoSerializer(photos, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
         serializer = PhotoSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
+        serializer.save(property=pk)
         return Response(serializer.errors, status=status.HTTP_201_CREATED)
 
 @api_view(['GET', 'PUT', 'DELETE'])

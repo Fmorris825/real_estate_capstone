@@ -9,7 +9,7 @@ const PropertyCard = ({ property, setSelectedProperty }) => {
     <div className="d-flex propertycards" onClick={handleSelection}>
       <img
         className="cardimg"
-        src={property.photo.photo_url}
+        src={property.photo_url}
         alt={property.address}
       />
       <div className="cardinfo d-flex flex-column">
