@@ -16,6 +16,7 @@ import ContactUsButton from "../ContactUsButton/ContactUsButton";
 const NavBar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
+
   return (
     <Navbar
       sticky="top"
@@ -59,9 +60,14 @@ const NavBar = () => {
         <ContactUsButton />
         <Nav>
           {user ? (
-            <button className="navbutton" onClick={logoutUser}>
-              Logout
-            </button>
+            <div>
+              <button className="navbutton" onClick={logoutUser}>
+                Logout
+              </button>
+              <button className="navbutton" onClick={() => navigate("/admin")}>
+                Admin
+              </button>
+            </div>
           ) : (
             <button className="navbutton" onClick={() => navigate("/login")}>
               Login

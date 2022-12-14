@@ -18,6 +18,7 @@ import RealtorsPage from "./components/RealtorsPage/RealtorsPage";
 import PropertiesPage from "./components/PropertiesPage/PropertiesPage";
 import SophiaMorrisPage from "./components/SophiaMorrisPage/SophiaMorrisPage";
 import DavidVernonPage from "./components/DavidVernonPage/DavidVernonPage";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/realtors/sophiamorris" element={<SophiaMorrisPage />} />
         <Route path="/realtors/davidvernon" element={<DavidVernonPage />} />
         <Route path="/properties" element={<PropertiesPage />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
       <Footer />
     </div>
