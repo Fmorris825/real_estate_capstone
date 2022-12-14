@@ -19,5 +19,6 @@ from . import views
 
 urlpatterns = [
     path('', views.photo_library ),
-    path('<int:pk>', views.get_photo_by_id )
+    path('<int:pk>/', views.post_photo ),
+
 ]

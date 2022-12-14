@@ -7,7 +7,11 @@ const LargePhoto = ({ selectedPhoto, show }) => {
     <div>
       <Image className="largePhoto" src={selectedPhoto.photo_url} />
     </div>
-  ) : null;
+  ) : (
+    <div className="largePlaceHolderText">
+      <h3>Select Photo from the left the see more of this great property.</h3>{" "}
+    </div>
+  );
 };
 
 export default LargePhoto;

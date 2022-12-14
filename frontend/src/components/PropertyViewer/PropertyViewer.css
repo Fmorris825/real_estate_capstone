@@ -9,4 +9,14 @@
   border-radius: 5px;
   box-shadow: 10px 10px 5px lightgray;
   margin: 35px;
+  width: 1200px;
+}
+
+.propertyCardInfo {
+  width: 500px;
+}
+
+.thumbnailContainer {
+  overflow-y: scroll;
+  height: 500px;
 }

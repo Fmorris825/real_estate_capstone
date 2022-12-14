@@ -5,3 +5,12 @@
   border-radius: 3px;
   margin: 10px;
 }
+
+.largePlaceHolderText {
+  width: 475px;
+  height: 475px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
