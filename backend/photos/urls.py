@@ -20,5 +20,4 @@ from . import views
 urlpatterns = [
     path('', views.photo_library ),
     path('<int:pk>/', views.post_photo ),
-
 ]
