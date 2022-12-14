@@ -32,11 +32,6 @@ const Map = () => {
     width: "800px",
   };
 
-  // const center = {
-  //   lat: longitude,
-  //   lng: latitude,
-  // };
-
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyDVQhEP2okcXMH9fvHlVpWAzbowx5-ZWZs",
     libraries: ["places"],

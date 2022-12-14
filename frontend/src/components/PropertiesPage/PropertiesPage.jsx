@@ -20,9 +20,6 @@ const PropertiesPage = () => {
     setProperties(response.data);
   }
 
-  console.log(properties);
-  console.log(selectedProperty);
-
   return selectedProperty ? (
     <div className="d-flex flex-column align-items-center">
       <PropertyViewer

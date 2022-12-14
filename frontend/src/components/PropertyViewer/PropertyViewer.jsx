@@ -12,6 +12,7 @@ const PropertyViewer = ({
   setSelectedPhoto,
 }) => {
   const [photos, setPhotos] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     getPhotosForProperties();
@@ -23,8 +24,6 @@ const PropertyViewer = ({
     );
     setPhotos(response.data);
   }
-
-  console.log(photos);
 
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
@@ -43,6 +42,7 @@ const PropertyViewer = ({
         <h1>{selectedProperty.address}</h1>
         <h3>${selectedProperty.listing_price}</h3>
         <p>{selectedProperty.description}</p>
+        <button>Edit</button>
       </div>
     </div>
   ) : null;
