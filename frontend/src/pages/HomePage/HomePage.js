@@ -36,8 +36,6 @@ const HomePage = () => {
       <RealtorsContainer />
       <hr />
       <GoogleMapsContainer />
-      <hr />
-      <PropertyCarousel />
     </div>
   );
 };

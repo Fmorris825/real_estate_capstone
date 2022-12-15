@@ -68,6 +68,7 @@ const EditRender = ({
         showDelPhoto={showDelPhoto}
         handleCloseDelPhoto={handleCloseDelPhoto}
         selectedPhoto={selectedPhoto}
+        getPhotosForProperties={getPhotosForProperties}
       />
     </div>
   ) : null;

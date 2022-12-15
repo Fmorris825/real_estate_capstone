@@ -50,21 +50,11 @@ const AddPhotoBtn = ({
     setPhoto_Url("");
     setProperty_id(0);
   };
+
   return (
     <Form className="m-3" onSubmit={handleSubmit}>
-      <Form.Label className="form-title">Add Photo Form</Form.Label>
       <FormGroup>
-        <FormLabel>
-          Current Photo Url:{" "}
-          <p className="photoEditUrl">{selectedPhoto.photo_url}</p>
-        </FormLabel>
-        <FormLabel>Current Photo:</FormLabel>
-        <Image
-          className="thumbnails"
-          thumbnail={true}
-          src={selectedPhoto.photo_url}
-          alt="Property Photo"
-        />
+        <FormLabel>Paste New Photo Url</FormLabel>
         <FormControl
           placeholder="Paste Photo Url Here..."
           className="shadow rounded input-box"
@@ -72,8 +62,16 @@ const AddPhotoBtn = ({
           onChange={(event) => setPhoto_Url(event.target.value)}
           value={photo_url}
         />
+        <div className="d-flex justify-content-center flex-column align-items-center m-3">
+          <FormLabel>Photo Preview:</FormLabel>
+          <Image
+            thumbnail={true}
+            src={photo_url}
+            alt="Paste Photo Url above to see Photo Preview."
+          />
+        </div>
       </FormGroup>
-      <button className="button" type="submit">
+      <button className="button m-2" type="submit">
         Add
       </button>
     </Form>

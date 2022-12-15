@@ -110,7 +110,7 @@ const EditPropertyForm = ({ selectedProperty, getProperties }) => {
           value={photo_url}
         />
       </FormGroup>
-      <button className="savebutton" type="submit">
+      <button className="savebutton m-2" type="submit">
         Save Changes
       </button>
     </Form>

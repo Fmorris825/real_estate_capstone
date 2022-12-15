@@ -18,7 +18,7 @@ const AddPhotoModal = ({
       onHide={handleClose}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Title>Add Photo</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {" "}
@@ -30,12 +30,7 @@ const AddPhotoModal = ({
         />{" "}
       </Modal.Body>
       <Modal.Footer>
-        <button variant="secondary" onClick={handleClose}>
-          Close
-        </button>
-        <button variant="primary" onClick={handleClose}>
-          Save Changes
-        </button>
+        <button onClick={handleClose}>Close</button>
       </Modal.Footer>
     </Modal>
   );
