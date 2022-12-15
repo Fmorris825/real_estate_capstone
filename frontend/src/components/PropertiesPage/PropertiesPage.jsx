@@ -26,6 +26,7 @@ const PropertiesPage = () => {
         selectedProperty={selectedProperty}
         setSelectedPhoto={setSelectedPhoto}
         selectedPhoto={selectedPhoto}
+        getProperties={getProperties}
       />
       <PropertyList
         properties={properties}

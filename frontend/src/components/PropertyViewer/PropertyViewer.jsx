@@ -5,11 +5,13 @@ import "./PropertyViewer.css";
 import ImageCardViewer from "../ImageCardViewer/ImageCardViewer";
 import LargePhoto from "../LargePhoto/LargePhoto";
 import { Col, Container } from "react-bootstrap";
+import EditRender from "../EditRender/EditRender";
 
 const PropertyViewer = ({
   selectedProperty,
   selectedPhoto,
   setSelectedPhoto,
+  getProperties,
 }) => {
   const [photos, setPhotos] = useState(false);
   const [show, setShow] = useState(false);
@@ -24,7 +26,7 @@ const PropertyViewer = ({
     );
     setPhotos(response.data);
   }
-
+  console.log(show);
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
       <div className="d-flex flex-column m-1 thumbnailContainer">
@@ -42,7 +44,11 @@ const PropertyViewer = ({
         <h1>{selectedProperty.address}</h1>
         <h3>${selectedProperty.listing_price}</h3>
         <p>{selectedProperty.description}</p>
-        <button>Edit</button>
+
+        <EditRender
+          selectedProperty={selectedProperty}
+          getProperties={getProperties}
+        />
       </div>
     </div>
   ) : null;

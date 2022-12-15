@@ -1,18 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import useAuth from "../../hooks/useAuth";
+import "./EditPropertyForm.css";
 
-import { FormControl, FormGroup, Form } from "react-bootstrap";
+import {
+  FormControl,
+  FormGroup,
+  Form,
+  FormLabel,
+  Image,
+} from "react-bootstrap";
 
-const AddPropertyForm = () => {
+const EditPropertyForm = ({ selectedProperty, getProperties }) => {
   const [photo_url, setPhoto_Url] = useState("");
   const [address, setAddress] = useState("");
   const [description, setDescription] = useState("");
   const [listing_price, setListing_Price] = useState(0);
   const [user, token] = useAuth();
 
-  async function addProperty() {
-    let newProperty = {
+  async function editProperty() {
+    let editProperty = {
       address: address,
       description: description,
       listing_price: listing_price,
@@ -21,19 +28,18 @@ const AddPropertyForm = () => {
     };
 
     try {
-      let response = await axios.post(
-        "http://127.0.0.1:8000/api/properties/post/",
-        newProperty,
+      let response = await axios.put(
+        `http://127.0.0.1:8000/api/properties/${selectedProperty.id}`,
+        editProperty,
         {
           headers: {
             Authorization: "Bearer " + token,
           },
         }
       );
-      //   if (response.status === 201)
-      //    {
-      //     await getAllComments();
-      //   }
+      if (response.status === 202) {
+        await getProperties();
+      }
     } catch (error) {
       console.log(error.response.data);
     }
@@ -41,7 +47,7 @@ const AddPropertyForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addProperty();
+    editProperty();
     setPhoto_Url("");
     setAddress("");
     setDescription("");
@@ -52,6 +58,7 @@ const AddPropertyForm = () => {
       <Form.Label className="form-title">Add Property Form</Form.Label>
 
       <FormGroup>
+        <FormLabel>Current Address: {selectedProperty.address}</FormLabel>
         <FormControl
           placeholder="Property Address Here..."
           className="shadow rounded input-box"
@@ -61,6 +68,9 @@ const AddPropertyForm = () => {
         />
       </FormGroup>
       <FormGroup>
+        <FormLabel>
+          Current Property Description: {selectedProperty.description}
+        </FormLabel>
         <FormControl
           placeholder="Property Description Here..."
           className="shadow rounded input-box"
@@ -70,6 +80,9 @@ const AddPropertyForm = () => {
         />
       </FormGroup>
       <FormGroup>
+        <FormLabel>
+          Current Listing Price: {selectedProperty.listing_price}
+        </FormLabel>
         <FormControl
           className="shadow rounded input-box"
           type="number"
@@ -78,6 +91,17 @@ const AddPropertyForm = () => {
         />
       </FormGroup>
       <FormGroup>
+        <FormLabel>
+          Current Photo Url:{" "}
+          <p className="photoEditUrl">{selectedProperty.photo_url}</p>
+        </FormLabel>
+        <FormLabel>Current Photo:</FormLabel>
+        <Image
+          className="thumbnails"
+          thumbnail={true}
+          src={selectedProperty.photo_url}
+          alt="Property Photo"
+        />
         <FormControl
           placeholder="Paste Photo Url Here..."
           className="shadow rounded input-box"
@@ -86,11 +110,11 @@ const AddPropertyForm = () => {
           value={photo_url}
         />
       </FormGroup>
-      <button className="button" type="submit">
-        Add
+      <button className="savebutton" type="submit">
+        Save Changes
       </button>
     </Form>
   );
 };
 
-export default AddPropertyForm;
+export default EditPropertyForm;

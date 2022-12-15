@@ -39,7 +39,7 @@ def get_property_by_id(request, pk):
         serializer = PropertySerializer(property, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
     elif request.method == 'DELETE':
         property.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
