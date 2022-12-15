@@ -40,6 +40,7 @@ const PropertiesPage = () => {
       <PropertyList
         properties={properties}
         setSelectedProperty={setSelectedProperty}
+        setSelectedPhoto={setSelectedPhoto}
       />
     </div>
   );

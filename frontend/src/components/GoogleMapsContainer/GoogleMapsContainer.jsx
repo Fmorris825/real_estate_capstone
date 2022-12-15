@@ -4,7 +4,6 @@ import axios from "axios";
 import API_KEY from "../../API_KEY";
 import FormGroup from "react-bootstrap/esm/FormGroup";
 import MapsSearchForm from "../MapsSearchForm/MapsSearchForm";
-import MapIFrame from "../MapIFrame/MapIFrame";
 import MapIFrameCopy from "../MapIFrame/MapIFrame_copy";
 
 const GoogleMapsContainer = () => {

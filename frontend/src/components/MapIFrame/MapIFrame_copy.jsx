@@ -4,7 +4,7 @@ import {
   StandaloneSearchBox,
   Marker,
 } from "@react-google-maps/api";
-import { useEffect } from "react";
+
 import { useState } from "react";
 
 const MapIFrameCopy = () => {
@@ -49,8 +49,8 @@ const Map = () => {
       lat: placeArray.viewport.Wa.hi,
       lng: placeArray.viewport.Ia.hi,
     });
+    console.log(place);
   };
-
   if (!isLoaded) return <div>Loading...</div>;
   return (
     <div>

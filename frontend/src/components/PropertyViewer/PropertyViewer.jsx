@@ -14,7 +14,6 @@ const PropertyViewer = ({
   getProperties,
 }) => {
   const [photos, setPhotos] = useState(false);
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     getPhotosForProperties();
@@ -26,7 +25,6 @@ const PropertyViewer = ({
     );
     setPhotos(response.data);
   }
-  console.log(show);
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
       <div className="d-flex flex-column m-1 thumbnailContainer">
@@ -48,6 +46,8 @@ const PropertyViewer = ({
         <EditRender
           selectedProperty={selectedProperty}
           getProperties={getProperties}
+          selectedPhoto={selectedPhoto}
+          getPhotosForProperties={getPhotosForProperties}
         />
       </div>
     </div>
