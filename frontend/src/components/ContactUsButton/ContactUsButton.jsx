@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import ContactUsForm from "../ContactUsForm/ContactUsForm";
+import ContactUsForm from "../CRUDCompoents/ContactUsForm/ContactUsForm";
 
 import "./ContactUsButton.css";
 

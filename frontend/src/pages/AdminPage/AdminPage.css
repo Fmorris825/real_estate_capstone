@@ -1,0 +1,11 @@
+.input-box {
+  width: 250px;
+  margin: 10px;
+}
+
+.adminphotopreview {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 6px 6px 5px darkgray;
+}

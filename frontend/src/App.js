@@ -14,12 +14,12 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import RealtorsPage from "./components/RealtorsPage/RealtorsPage";
-import PropertiesPage from "./components/PropertiesPage/PropertiesPage";
-import SophiaMorrisPage from "./components/SophiaMorrisPage/SophiaMorrisPage";
-import DavidVernonPage from "./components/DavidVernonPage/DavidVernonPage";
-import AdminPage from "./components/AdminPage/AdminPage";
-import MapsAndNeighborsHoods from "./components/MapsAndNeighborhoodsPage/MapsAndNeighborhoodsPage";
+import RealtorsPage from "./pages/RealtorsPage/RealtorsPage";
+import PropertiesPage from "./pages/PropertiesPage/PropertiesPage";
+import SophiaMorrisPage from "./pages/RealtorsPage/SophiaMorrisPage/SophiaMorrisPage";
+import DavidVernonPage from "./pages/RealtorsPage/DavidVernonPage/DavidVernonPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
+import MapsAndNeighborsHoods from "./pages/MapsAndNeighborhoodsPage/MapsAndNeighborhoodsPage";
 
 function App() {
   return (
