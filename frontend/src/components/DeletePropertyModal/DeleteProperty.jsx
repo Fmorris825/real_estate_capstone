@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import { Form, Image, FormLabel, Modal } from "react-bootstrap";
 import axios from "axios";
+import { Form, Image, FormLabel, Modal } from "react-bootstrap";
+import "./DeleteProperty.css";
 import useAuth from "../../hooks/useAuth";
 
-const DeletePhotoModal = ({
-  handleCloseDelPhoto,
-  showDelPhoto,
-  selectedPhoto,
-  getPhotosForProperties,
+const DeletePropertyModal = ({
+  showDelProp,
+  handleCloseDelProp,
+  selectedProperty,
+  getProperties,
 }) => {
   const [validationInput, setValidationInput] = useState("");
   const [user, token] = useAuth();
 
-  async function deletePhoto() {
+  async function deleteProperty() {
     let response = await axios.delete(
-      `http://127.0.0.1:8000/api/photos/delete/${selectedPhoto.id}/`,
+      `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/`,
       {
         headers: {
           Authorization: "Bearer " + token,
@@ -22,18 +23,18 @@ const DeletePhotoModal = ({
       }
     );
     if (response.status === 204) {
-      await getPhotosForProperties();
+      await getProperties();
     }
   }
 
   const handleModal = () => {
-    handleCloseDelPhoto();
+    handleCloseDelProp();
   };
 
   const handleSubmit = (event) => {
     setValidationInput(event);
     if (event === "yes") {
-      deletePhoto();
+      deleteProperty();
       handleModal();
     } else if (event === "no") {
       handleModal();
@@ -45,22 +46,25 @@ const DeletePhotoModal = ({
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      show={showDelPhoto}
-      onHide={handleCloseDelPhoto}
+      show={showDelProp}
+      onHide={handleCloseDelProp}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Delete Photo</Modal.Title>
+        <Modal.Title>Delete Property</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
+          <FormLabel>
+            <b>Are you sure you want to delete this Property?</b>
+          </FormLabel>
           <div className="d-flex flex-column">
-            <FormLabel>
-              <b>Are you sure you want to delete this Photo?</b>
-            </FormLabel>
+            <div>{selectedProperty.address}</div>
+            <div>{selectedProperty.listing_price}</div>
+            <p>{selectedProperty.description}</p>
             <Image
               className="deletePropPhoto"
               thumbnail={true}
-              src={selectedPhoto.photo_url}
+              src={selectedProperty.photo_url}
               alt="Property Photo"
             />
           </div>
@@ -84,10 +88,10 @@ const DeletePhotoModal = ({
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <button onClick={handleCloseDelPhoto}>Close</button>
+        <button onClick={handleCloseDelProp}>Close</button>
       </Modal.Footer>
     </Modal>
   );
 };
 
-export default DeletePhotoModal;
+export default DeletePropertyModal;

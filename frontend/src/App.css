@@ -59,6 +59,9 @@ button:hover {
 h4 {
   border-bottom: 5px solid black;
   border-radius: 3px;
+  text-shadow: 2px 2px 1px darkgrey;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 hr {

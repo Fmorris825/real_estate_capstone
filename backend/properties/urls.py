@@ -20,6 +20,6 @@ from . import views
 urlpatterns = [
     path('', views.property_library ),
     path('post/', views.post_property),
-    path('<int:pk>', views.get_property_by_id ),
+    path('<int:pk>/', views.get_property_by_id ),
     path('<int:pk>/photos/', include('photos.urls'))
 ]

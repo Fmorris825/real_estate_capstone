@@ -26,11 +26,14 @@ const NavBar = () => {
       variant="dark"
       className="navBar"
     >
-      <NavbarBrand href="/">Morris Delta Realty</NavbarBrand>
+      <NavbarBrand href="/">
+        <div className="brandnav">Morris Delta Realty </div>
+      </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav" />
       <NavbarCollapse id="responsive-navbar-nav">
         <Nav className="me-auto">
           <NavDropdown
+            className="link"
             id="nav-dropdown-dark-example"
             title="Realtors"
             menuVariant="dark"

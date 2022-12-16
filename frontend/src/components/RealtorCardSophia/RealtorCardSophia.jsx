@@ -12,10 +12,13 @@ const RealtorCardSophia = () => {
           xs={3}
           className="d-flex justify-content-center align-items-center"
         >
-          <img src={picture} alt="Women Realtors" />
+          <img className="portrait" src={picture} alt="Women Realtors" />
         </Col>
         <Col>
-          <h4>Sophia Vernon</h4>
+          <div>
+            <h4>Sophia Vernon</h4>
+            <p className="subheader">Expertise: Residential Specilist </p>
+          </div>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

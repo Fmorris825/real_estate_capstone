@@ -29,7 +29,7 @@ const EditPropertyForm = ({ selectedProperty, getProperties }) => {
 
     try {
       let response = await axios.put(
-        `http://127.0.0.1:8000/api/properties/${selectedProperty.id}`,
+        `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/`,
         editProperty,
         {
           headers: {

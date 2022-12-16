@@ -2,9 +2,12 @@
   width: 900px;
   border: 1px solid lightgray;
   box-shadow: 10px 10px 5px lightgray;
+  margin: 40px;
+  border-radius: 4px;
 }
 
 .carouselitem {
   height: 600px;
   object-fit: cover;
+  border-radius: 4px;
 }

@@ -1,7 +1,7 @@
 .largePhoto {
   width: 475px;
   height: 475px;
-  box-shadow: 10px 10px 5px lightgray;
+  box-shadow: 6px 6px 5px lightgray;
   border-radius: 3px;
   margin: 10px;
 }

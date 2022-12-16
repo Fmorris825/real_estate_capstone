@@ -35,6 +35,7 @@ li {
 .link {
   text-decoration: none;
   color: gray;
+  text-shadow: 2px 2px 4px black;
 }
 
 .link:hover {
@@ -44,4 +45,10 @@ li {
 .navbutton {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.brandnav {
+  text-shadow: 2px 2px 4px black;
+  font-weight: 500;
+  font-size: 30px;
 }

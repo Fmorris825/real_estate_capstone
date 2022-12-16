@@ -9,7 +9,10 @@ const RealtorCardDavid = () => {
     <div>
       <Row className="p-3 m-3">
         <Col>
-          <h4>David Vernon</h4>
+          <div>
+            <h4>David Vernon</h4>
+            <p className="subheader">Expertise: Residential Specilist </p>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -24,7 +27,7 @@ const RealtorCardDavid = () => {
           xs={3}
           className="d-flex justify-content-center align-items-center"
         >
-          <img src={picture} alt="Realtor Male" />
+          <img className="portrait" src={picture} alt="Realtor Male" />
         </Col>
       </Row>
     </div>

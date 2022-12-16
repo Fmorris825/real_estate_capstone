@@ -31,6 +31,7 @@ def post_photo(request, pk):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def get_photo_by_id(request, pk):
     photo = get_object_or_404(Photo, pk=pk)
     if request.method == 'GET':

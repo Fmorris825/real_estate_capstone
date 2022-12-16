@@ -1,5 +1,5 @@
 .propertycards {
-  box-shadow: 10px 10px 5px lightgray;
+  box-shadow: 7px 7px 5px lightgray;
   width: 600px;
   border: 1px solid lightgrey;
   color: darkgrey;
@@ -16,7 +16,7 @@
   width: 300px;
   height: 200px;
   margin: 15px;
-  box-shadow: 10px 10px 5px lightgray;
+  box-shadow: 6px 6px 5px darkgray;
 }
 
 .carddesc {

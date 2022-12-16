@@ -1,0 +1,6 @@
+.deletePropPhoto {
+  box-shadow: 6px 6px 5px lightgray;
+  width: 250px;
+  height: 250px;
+  align-self: center;
+}

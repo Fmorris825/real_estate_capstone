@@ -17,6 +17,7 @@
   color: aliceblue;
   font-weight: 900;
   font-size: 45px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .text_two {
@@ -27,6 +28,18 @@
   font-size: 25px;
   padding: 20px;
   color: aliceblue;
-  font-weight: 100;
   font-weight: 500;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.text_three {
+  position: absolute;
+  bottom: 280px;
+  right: 70px;
+  text-align: end;
+  font-size: 40px;
+  padding: 20px;
+  color: aliceblue;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px #000000;
 }
