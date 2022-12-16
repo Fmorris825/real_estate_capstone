@@ -1,15 +1,24 @@
 img {
   width: 350px;
-  height: 325px;
+  height: 425px;
+  object-fit: cover;
 }
 
 .subheader {
   font-weight: 800;
-  color: darkgray;
+  color: #041e42;
   opacity: 80%;
-  text-shadow: 1px 1px 1px #000000;
 }
 
 .portrait {
   box-shadow: 5px 5px 5px grey;
+  border: goldenrod solid 2px;
+}
+
+.contactInfo {
+  color: navy;
+}
+
+li {
+  list-style: circle;
 }

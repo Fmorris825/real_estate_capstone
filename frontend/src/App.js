@@ -19,6 +19,7 @@ import PropertiesPage from "./components/PropertiesPage/PropertiesPage";
 import SophiaMorrisPage from "./components/SophiaMorrisPage/SophiaMorrisPage";
 import DavidVernonPage from "./components/DavidVernonPage/DavidVernonPage";
 import AdminPage from "./components/AdminPage/AdminPage";
+import MapsAndNeighborsHoods from "./components/MapsAndNeighborhoodsPage/MapsAndNeighborhoodsPage";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/realtors" element={<RealtorsPage />} />
+        <Route
+          path="mapsandneighborhoods"
+          element={<MapsAndNeighborsHoods />}
+        />
         <Route path="/realtors/sophiamorris" element={<SophiaMorrisPage />} />
         <Route path="/realtors/davidvernon" element={<DavidVernonPage />} />
         <Route path="/properties" element={<PropertiesPage />} />

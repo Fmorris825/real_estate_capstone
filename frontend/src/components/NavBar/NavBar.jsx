@@ -59,6 +59,11 @@ const NavBar = () => {
               Properties
             </Link>
           </Nav.Link>
+          <Nav.Link>
+            <Link className="p-1 link" to="mapsandneighborhoods">
+              Maps & Neighborhoods
+            </Link>
+          </Nav.Link>
         </Nav>
         <ContactUsButton />
         <Nav>

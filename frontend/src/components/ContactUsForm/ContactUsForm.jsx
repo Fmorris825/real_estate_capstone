@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EmailKey from "../../EmailKey";
 
 import {
   Button,
@@ -11,24 +12,33 @@ import {
 
 import axios from "axios";
 import CommentAlert from "../CommentAlert/CommentAlert";
+import MapsKey from "../../MapsKey";
+import EmailValidatorStatement from "../EmailValidatorStatement/EmailValidatorStatement";
 
 const ContactUsForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [inquiry, setInquiry] = useState("");
+  const [emailData, setEmailData] = useState({});
+  const [emailValidator, setEmailValidator] = useState(false);
 
   const [show, setShow] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addClient_Inquiry();
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setInquiry("");
-  };
-
+  async function validateEmail() {
+    const response = await axios.get(
+      `https://emailvalidation.abstractapi.com/v1/?api_key=${EmailKey.Key}&email=${email}`
+    );
+    setEmailData(response.data);
+    console.log(response);
+    if (response.data.deliverability === "DELIVERABLE") {
+      addClient_Inquiry();
+      setEmailValidator(false);
+      clearForm();
+    } else {
+      setEmailValidator(true);
+    }
+  }
   async function addClient_Inquiry() {
     let newInquiry = {
       first_name: firstName,
@@ -45,6 +55,17 @@ const ContactUsForm = () => {
       // await getAllInquiry();
     }
   }
+
+  function clearForm() {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setInquiry("");
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    validateEmail();
+  };
 
   return (
     <div>
@@ -79,6 +100,7 @@ const ContactUsForm = () => {
               onChange={(event) => setEmail(event.target.value)}
               value={email}
             />
+            <EmailValidatorStatement emailValidator={emailValidator} />
             <Form.Text className="text-muted">
               We will not use this email for unwanted promotions and contact,
               only to repsond to your inquiry.

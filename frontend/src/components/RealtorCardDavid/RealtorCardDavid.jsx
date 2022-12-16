@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import picture from "./MaleProfessional.jpg";
+import picture from "./MalePortrait.jpg";
 
 const RealtorCardDavid = () => {
   return (
@@ -11,7 +11,7 @@ const RealtorCardDavid = () => {
         <Col>
           <div>
             <h4>David Vernon</h4>
-            <p className="subheader">Expertise: Residential Specilist </p>
+            <p className="subheader">Expertise: Commercial Specilist </p>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -22,6 +22,34 @@ const RealtorCardDavid = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <div className="d-flex justify-content-around">
+            <div>
+              {" "}
+              <div className="d-flex">
+                <h5>Certifications:</h5>
+              </div>
+              <ul className="d-flex flex-column">
+                <li>Texas Real Estate License</li>
+                <li>Real Estate Investment Modeling Certificate</li>
+                <li>Commercial Real Estate Certifcate</li>
+              </ul>
+            </div>
+            <div>
+              <div className="d-flex">
+                <h5>Contact:</h5>
+              </div>
+              <div>
+                <b>Email:</b>{" "}
+                <span className="contactInfo">DavidV@MorrisDeltaRealy.com</span>
+              </div>
+              <div>
+                {" "}
+                <b>#:</b> <span className="contactInfo">(469) 858-8989</span>{" "}
+                <b>| Fax:</b>{" "}
+                <span className="contactInfo">(469) 787-7878</span>
+              </div>
+            </div>
+          </div>
         </Col>
         <Col
           xs={3}

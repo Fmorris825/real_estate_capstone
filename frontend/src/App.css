@@ -57,16 +57,24 @@ button:hover {
 }
 
 h4 {
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid #041e42;
   border-radius: 3px;
   text-shadow: 2px 2px 1px darkgrey;
   font-size: 35px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+h5 {
+  border-bottom: 3px solid goldenrod;
+  border-radius: 3px;
+  text-shadow: 2px 2px 1px darkgrey;
+  font-size: 22px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
 hr {
   height: 5px;
-  background-color: black;
+  background-color: #041e42;
   border: 0;
   width: 90%;
   margin: 50px auto;
@@ -75,4 +83,10 @@ hr {
 
 .shadow {
   box-shadow: 10px 10px 5px lightgray;
+}
+
+.bodyBackground {
+  background-color: whitesmoke;
+  width: 90%;
+  margin: auto;
 }

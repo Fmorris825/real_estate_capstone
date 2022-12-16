@@ -2,12 +2,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import picture from "./WomenProfessionals.jpg";
+import picture from "./FemalePortrait.jpg";
 
 const RealtorCardSophia = () => {
   return (
     <div>
-      <Row className="p-3 m-3">
+      <Row className="p-3">
         <Col
           xs={3}
           className="d-flex justify-content-center align-items-center"
@@ -16,7 +16,7 @@ const RealtorCardSophia = () => {
         </Col>
         <Col>
           <div>
-            <h4>Sophia Vernon</h4>
+            <h4>Sophia Morris</h4>
             <p className="subheader">Expertise: Residential Specilist </p>
           </div>
 
@@ -29,6 +29,37 @@ const RealtorCardSophia = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <div className="d-flex justify-content-around">
+            <div>
+              {" "}
+              <div className="d-flex">
+                <h5>Certifications:</h5>
+              </div>
+              <ul className="d-flex flex-column">
+                <li>Texas Real Estate License</li>
+                <li>Real Estate Property Management Certificate</li>
+                <li>Real Estate Investment Modeling Certifcate</li>
+                <li>Real Estate Devlopment Certificate</li>
+              </ul>
+            </div>
+            <div>
+              <div className="d-flex">
+                <h5>Contact:</h5>
+              </div>
+              <div>
+                <b>Email:</b>{" "}
+                <span className="contactInfo">
+                  SophiaM@MorrisDeltaRealy.com
+                </span>
+              </div>
+              <div>
+                {" "}
+                <b>#:</b> <span className="contactInfo">(469) 457-7897</span>{" "}
+                <b>| Fax:</b>{" "}
+                <span className="contactInfo">(469) 366-4578</span>
+              </div>
+            </div>
+          </div>
         </Col>
       </Row>
     </div>

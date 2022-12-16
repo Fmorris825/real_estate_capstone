@@ -37,7 +37,6 @@ const EditRender = ({
   const handleCloseDelProp = () => setShowDelProp(false);
   const handleShowDelProp = () => setShowDelProp(true);
 
-  console.log(showDelPhoto);
   return user ? (
     <div>
       <div className="d-flex justify-content-center ">

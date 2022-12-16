@@ -33,9 +33,9 @@ const HomePage = () => {
   return (
     <div>
       <Banner />
-      <RealtorsContainer />
-      <hr />
-      <GoogleMapsContainer />
+      <div>
+        <hr />
+      </div>
     </div>
   );
 };

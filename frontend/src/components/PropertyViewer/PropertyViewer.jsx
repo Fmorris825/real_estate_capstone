@@ -39,8 +39,12 @@ const PropertyViewer = ({
       </div>
       <LargePhoto selectedPhoto={selectedPhoto} show={selectedPhoto} />
       <div className="propertyCardInfo">
-        <h1>{selectedProperty.address}</h1>
-        <h3>${selectedProperty.listing_price}</h3>
+        <div className="d-flex">
+          <h4>{selectedProperty.address}</h4>
+        </div>
+        <div className="d-flex">
+          <h5>${selectedProperty.listing_price}</h5>
+        </div>
         <p>{selectedProperty.description}</p>
 
         <EditRender

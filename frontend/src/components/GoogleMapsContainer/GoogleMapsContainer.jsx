@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
-import API_KEY from "../../API_KEY";
+import API_KEY from "../../MapsKey";
 import FormGroup from "react-bootstrap/esm/FormGroup";
 import MapsSearchForm from "../MapsSearchForm/MapsSearchForm";
 import MapIFrameCopy from "../MapIFrame/MapIFrame_copy";

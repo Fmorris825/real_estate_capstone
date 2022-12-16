@@ -5,6 +5,7 @@ import "./PropertiesPage.css";
 import PropertyList from "../PropertyList/PropertyList";
 import PropertyViewer from "../PropertyViewer/PropertyViewer";
 import { Container } from "react-bootstrap";
+import PropertiesIFrame from "../PropertiesIFrame/PropertiesIFrame";
 
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
@@ -28,6 +29,7 @@ const PropertiesPage = () => {
         selectedPhoto={selectedPhoto}
         getProperties={getProperties}
       />
+      <PropertiesIFrame selectedProperty={selectedProperty} />
       <PropertyList
         properties={properties}
         setSelectedProperty={setSelectedProperty}
