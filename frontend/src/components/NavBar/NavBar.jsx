@@ -27,9 +27,7 @@ const NavBar = () => {
       className="navBar"
     >
       <NavbarBrand href="/">
-        <div className="brandnav">
-          <h1>Morris Delta Realty</h1>
-        </div>
+        <div className="brandnav">Morris Delta Realty</div>
       </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav" />
       <NavbarCollapse id="responsive-navbar-nav">
@@ -78,11 +76,11 @@ const NavBar = () => {
                 Admin
               </button>
             </div>
-          ) : (
-            <button className="navbutton" onClick={() => navigate("/login")}>
-              Login
-            </button>
-          )}
+          ) : null
+          // <button className="navbutton" onClick={() => navigate("/login")}>
+          //   Login
+          // </button>
+          }
         </Nav>
       </NavbarCollapse>
     </Navbar>

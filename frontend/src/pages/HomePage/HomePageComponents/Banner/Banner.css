@@ -9,7 +9,7 @@
 
 .text_one {
   position: absolute;
-  top: 80px;
+  top: 125px;
   left: 30px;
   text-transform: uppercase;
   font-size: 25px;
@@ -22,7 +22,7 @@
 
 .text_two {
   position: absolute;
-  top: 130px;
+  top: 175px;
   left: 30px;
   text-align: end;
   font-size: 25px;

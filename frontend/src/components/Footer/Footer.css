@@ -1,9 +1,45 @@
-footer {
-  position: fixed;
+.footer {
   bottom: 0;
   font-size: 1.2rem;
   left: 0;
-  padding: 1rem;
   text-align: center;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: gray;
+  text-shadow: 2px 2px 4px black;
+}
+
+.link:hover {
+  color: white;
+}
+
+.navbutton {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navBar {
+  background: steelblue;
+  box-shadow: 4px 2px 5px gray;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.navBar button:hover {
+  background: white;
+  color: steelblue;
+  cursor: pointer;
 }

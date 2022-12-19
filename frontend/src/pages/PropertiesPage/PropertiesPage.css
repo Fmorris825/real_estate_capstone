@@ -32,3 +32,8 @@
 .cardinfo {
   margin: 15px;
 }
+
+.propertyheader {
+  color: black;
+  margin-left: 70px;
+}

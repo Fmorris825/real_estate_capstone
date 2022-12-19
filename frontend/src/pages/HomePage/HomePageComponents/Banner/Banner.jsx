@@ -9,7 +9,9 @@ const Banner = () => {
       <h3 className="text_two">
         The Best Real Estate Experience in the DFW to Dallas Area
       </h3>
-      <h3 className="text_three">Your Commercial & Residential Needs</h3>
+      <h3 className="text_three">
+        For All Your Commercial & Residential Real Estate Needs
+      </h3>
     </div>
   );
 };

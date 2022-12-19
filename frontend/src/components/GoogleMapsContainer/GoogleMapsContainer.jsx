@@ -5,8 +5,13 @@ import PropertiesIFrame from "../PropertiesIFrame/PropertiesIFrame";
 
 const GoogleMapsContainer = ({ selectedProperty }) => {
   return (
-    <div className="d-flex justify-content-center">
-      <PropertiesIFrame selectedProperty={selectedProperty} className="m-3" />
+    <div>
+      <div className="d-flex m-3">
+        <h4 className="propertyheader">Neighboorhood Viewer</h4>
+      </div>
+      <div className="d-flex justify-content-center">
+        <PropertiesIFrame selectedProperty={selectedProperty} className="m-3" />
+      </div>
     </div>
   );
 };

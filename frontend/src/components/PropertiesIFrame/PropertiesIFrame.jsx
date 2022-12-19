@@ -15,7 +15,11 @@ const PropertiesIFrame = ({ selectedProperty }) => {
   });
 
   if (!isLoaded) return <div>Loading...</div>;
-  return <Map selectedProperty={selectedProperty} />;
+  return (
+    <div>
+      <Map selectedProperty={selectedProperty} />;
+    </div>
+  );
 };
 
 const Map = ({ selectedProperty }) => {

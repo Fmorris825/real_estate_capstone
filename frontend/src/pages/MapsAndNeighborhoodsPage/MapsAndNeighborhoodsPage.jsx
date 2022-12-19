@@ -3,6 +3,7 @@ import axios from "axios";
 import PropertyList from "../PropertiesPage/PropertiesPageComponents/PropertyList/PropertyList";
 import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
 import MapIFrameCopy from "../../components/MapIFrame/MapIFrame_copy";
+import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 
 const MapsAndNeighborsHoods = () => {
   const [properties, setProperties] = useState([]);
@@ -20,6 +21,7 @@ const MapsAndNeighborsHoods = () => {
 
   return selectedProperty ? (
     <div>
+      <MorrisDeltaHeader />
       <GoogleMapsContainer selectedProperty={selectedProperty} />{" "}
       <PropertyList
         properties={properties}
@@ -29,6 +31,7 @@ const MapsAndNeighborsHoods = () => {
     </div>
   ) : (
     <div className="d-flex flex-column align-items-center">
+      <MorrisDeltaHeader />
       <MapIFrameCopy />
       <PropertyList
         properties={properties}
