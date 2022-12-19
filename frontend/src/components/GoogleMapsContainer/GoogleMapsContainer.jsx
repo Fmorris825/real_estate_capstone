@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-import axios from "axios";
-import API_KEY from "../../MapsKey";
-import FormGroup from "react-bootstrap/esm/FormGroup";
-import MapsSearchForm from "../MapsSearchForm/MapsSearchForm";
 import MapIFrameCopy from "../MapIFrame/MapIFrame_copy";
+import PropertiesIFrame from "../PropertiesIFrame/PropertiesIFrame";
 
-const GoogleMapsContainer = () => {
-  const [searchResults, setSearchResults] = useState("");
-
-  console.log(searchResults);
-
+const GoogleMapsContainer = ({ selectedProperty }) => {
   return (
     <div className="d-flex justify-content-center">
-      <MapIFrameCopy />
+      <PropertiesIFrame selectedProperty={selectedProperty} className="m-3" />
     </div>
   );
 };

@@ -27,7 +27,9 @@ const NavBar = () => {
       className="navBar"
     >
       <NavbarBrand href="/">
-        <div className="brandnav">Morris Delta Realty </div>
+        <div className="brandnav">
+          <h1>Morris Delta Realty</h1>
+        </div>
       </NavbarBrand>
       <NavbarToggle aria-controls="responsive-navbar-nav" />
       <NavbarCollapse id="responsive-navbar-nav">

@@ -1,0 +1,50 @@
+/* .mdrheader {
+  padding: 25px 0px 25px 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 3px rgb(26, 96, 158);
+  color: #041e42;
+  background-image: url("./Dallas.jpg");
+  background-repeat: no-repeat;
+  background-position-y: 25%;
+  background-size: cover;
+  backgrou;
+} */
+
+.mdrheader {
+  position: relative;
+  height: 210px;
+  width: 100%;
+  opacity: 90%;
+  box-shadow: 4px 2px 5px gray;
+}
+
+.mdrheader::before {
+  content: "";
+  background-image: url("./Dallas.jpg");
+  background-size: cover;
+  background-position-y: 20%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
+
+h1 {
+  position: relative;
+  color: #ffffff;
+  line-height: 0.9;
+  padding-top: 40px;
+  padding-left: 60px;
+  text-shadow: 2px 2px 4px black;
+}
+
+h2 {
+  position: relative;
+  color: #ffffff;
+  line-height: 0.9;
+  padding-top: 15px;
+  padding-left: 85px;
+  text-shadow: 2px 2px 4px black;
+}

@@ -49,7 +49,9 @@ const RealtorCardSophia = () => {
               <div>
                 <b>Email:</b>{" "}
                 <span className="contactInfo">
-                  SophiaM@MorrisDeltaRealy.com
+                  <a href="mailto:SophiaM@MorrisDeltaRealy.com?subject=Hello from Morris Delta Realty!&body=What Property will you ne inquiring about today? or What questions can we help you find soluions for? Please Enter the Property Reference Number above if you are inquiring about a specfic listing on our site.">
+                    SophiaM@MorrisDeltaRealy.com
+                  </a>
                 </span>
               </div>
               <div>

@@ -53,7 +53,7 @@ const Map = () => {
   };
   if (!isLoaded) return <div>Loading...</div>;
   return (
-    <div>
+    <div className="map">
       <GoogleMap
         id="searchbox-example"
         mapContainerStyle={mapContainerStyle}
@@ -92,4 +92,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default MapIFrameCopy;

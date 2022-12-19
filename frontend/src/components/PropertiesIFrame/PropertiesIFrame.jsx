@@ -6,6 +6,7 @@ import {
 } from "@react-google-maps/api";
 
 import { useState } from "react";
+import "./PropertiesIFrame.css";
 
 const PropertiesIFrame = ({ selectedProperty }) => {
   const { isLoaded } = useLoadScript({
@@ -19,9 +20,9 @@ const PropertiesIFrame = ({ selectedProperty }) => {
 
 const Map = ({ selectedProperty }) => {
   const [searchBox, setSearchBox] = useState(null);
-  const [searchedPlace, setSearchedPlace] = useState({});
-  const [longitude, setLongitude] = useState(32.8631138697085);
-  const [latitude, setLatitude] = useState(-96.80663511970849);
+  // const [searchedPlace, setSearchedPlace] = useState({});
+  // const [longitude, setLongitude] = useState(32.8631138697085);
+  // const [latitude, setLatitude] = useState(-96.80663511970849);
   const [center, setCenter] = useState({
     lat: 32.8631138697085,
     lng: -96.80663511970849,
@@ -50,9 +51,10 @@ const Map = ({ selectedProperty }) => {
       lng: placeArray.viewport.Ia.hi,
     });
   };
+  console.log(selectedProperty);
   if (!isLoaded) return <div>Loading...</div>;
   return (
-    <div>
+    <div className="map">
       <GoogleMap
         id="searchbox-example"
         mapContainerStyle={mapContainerStyle}

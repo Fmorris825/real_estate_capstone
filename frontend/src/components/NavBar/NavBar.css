@@ -51,4 +51,6 @@ li {
   text-shadow: 2px 2px 4px black;
   font-weight: 500;
   font-size: 30px;
+  margin: 0;
+  padding: 0;
 }

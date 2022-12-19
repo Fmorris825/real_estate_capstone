@@ -6,6 +6,7 @@ import PropertyList from "./PropertiesPageComponents/PropertyList/PropertyList";
 import PropertyViewer from "./PropertiesPageComponents/PropertyViewer/PropertyViewer";
 import { Container } from "react-bootstrap";
 import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame";
+import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
@@ -22,22 +23,26 @@ const PropertiesPage = () => {
   }
 
   return selectedProperty ? (
-    <div className="d-flex flex-column align-items-center">
-      <PropertyViewer
-        selectedProperty={selectedProperty}
-        setSelectedPhoto={setSelectedPhoto}
-        selectedPhoto={selectedPhoto}
-        getProperties={getProperties}
-      />
+    <div>
+      <MorrisDeltaHeader />
+      <div className="d-flex flex-column align-items-center">
+        <PropertyViewer
+          selectedProperty={selectedProperty}
+          setSelectedPhoto={setSelectedPhoto}
+          selectedPhoto={selectedPhoto}
+          getProperties={getProperties}
+        />
 
-      <PropertyList
-        properties={properties}
-        setSelectedProperty={setSelectedProperty}
-        setSelectedPhoto={setSelectedPhoto}
-      />
+        <PropertyList
+          properties={properties}
+          setSelectedProperty={setSelectedProperty}
+          setSelectedPhoto={setSelectedPhoto}
+        />
+      </div>
     </div>
   ) : (
     <div>
+      <MorrisDeltaHeader />
       <PropertyCarousel />
       <PropertyList
         properties={properties}
