@@ -50,15 +50,19 @@ const DeletePropertyModal = ({
       onHide={handleCloseDelProp}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Delete Property</Modal.Title>
+        <Modal.Title>
+          <h4>Delete Property</h4>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           <FormLabel>
-            <b>Are you sure you want to delete this Property?</b>
+            <h5>Are you sure you want to delete this Property?</h5>
           </FormLabel>
           <div className="d-flex flex-column">
-            <div>{selectedProperty.address}</div>
+            <div>
+              <b>{selectedProperty.address}</b>
+            </div>
             <div>{selectedProperty.listing_price}</div>
             <p>{selectedProperty.description}</p>
             <Image

@@ -38,7 +38,7 @@ const EditRender = ({
   const handleShowDelProp = () => setShowDelProp(true);
 
   return user ? (
-    <div>
+    <div className="editBtns">
       <div className="d-flex justify-content-center ">
         <button className="adminBtn" onClick={handleShowProp}>
           Edit Property

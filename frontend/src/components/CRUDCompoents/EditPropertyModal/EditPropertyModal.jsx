@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
-import EditPropertyForm from "../../EditPropertyForm/EditPropertyForm";
+import EditPropertyForm from "../EditPropertyForm/EditPropertyForm";
 
 const EditPropertyModal = ({
   selectedProperty,
@@ -23,6 +23,7 @@ const EditPropertyModal = ({
         <EditPropertyForm
           selectedProperty={selectedProperty}
           getProperties={getProperties}
+          handleCloseProp={handleCloseProp}
         />
       </Modal.Body>
       <Modal.Footer>

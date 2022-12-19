@@ -54,7 +54,9 @@ const AddPhotoBtn = ({
   return (
     <Form className="m-3" onSubmit={handleSubmit}>
       <FormGroup>
-        <FormLabel>Paste New Photo Url</FormLabel>
+        <FormLabel>
+          <h5>Paste New Photo Url</h5>
+        </FormLabel>
         <FormControl
           placeholder="Paste Photo Url Here..."
           className="shadow rounded input-box"

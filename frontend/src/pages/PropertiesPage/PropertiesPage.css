@@ -5,6 +5,7 @@
   color: gray;
   border-radius: 5px;
   background-color: aliceblue;
+  height: 300px;
 }
 
 .propertycards:hover {
@@ -13,10 +14,18 @@
   color: #041e42;
 }
 
+.propertycards:hover .card-bottom-liner {
+  color: goldenrod;
+}
+
+.propertycards:hover strong {
+  color: black;
+}
+
 .cardimg {
   width: 300px;
   height: 200px;
-  margin: 15px;
+
   box-shadow: 6px 6px 5px darkgray;
 }
 
@@ -30,10 +39,31 @@
 }
 
 .cardinfo {
-  margin: 15px;
+  margin-left: 25px;
 }
 
 .propertyheader {
   color: black;
   margin-left: 70px;
+}
+
+.card-bottom-liner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  gap: 5px;
+}
+
+.img-info {
+  margin: 10px;
+}
+
+.card-bottom-liner b {
+  color: #041e42;
+}
+
+.propertyCardInfo {
+  padding-left: 40px;
+  gap: 20px;
 }

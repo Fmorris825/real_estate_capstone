@@ -45,7 +45,16 @@ const PropertyViewer = ({
         <div className="d-flex">
           <h5>${selectedProperty.listing_price}</h5>
         </div>
+        <div className="d-flex">
+          <h4> {selectedProperty.city}</h4>
+        </div>
         <p>{selectedProperty.description}</p>
+        <div className="card-bottom-liner">
+          <b>Ref #:</b> {selectedProperty.id} <strong>|</strong>
+          <b>Type:</b> {selectedProperty.type} <strong>|</strong> <b>Beds:</b>{" "}
+          {selectedProperty.beds} <strong>|</strong> <b>Baths:</b>
+          {selectedProperty.baths}
+        </div>
 
         <EditRender
           selectedProperty={selectedProperty}

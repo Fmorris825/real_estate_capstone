@@ -18,7 +18,9 @@ const AddPhotoModal = ({
       onHide={handleClose}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Add Photo</Modal.Title>
+        <Modal.Title>
+          <h4>Add Photo</h4>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {" "}

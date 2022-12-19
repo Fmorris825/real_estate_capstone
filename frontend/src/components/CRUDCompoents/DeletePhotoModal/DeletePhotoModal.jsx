@@ -49,13 +49,15 @@ const DeletePhotoModal = ({
       onHide={handleCloseDelPhoto}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Delete Photo</Modal.Title>
+        <Modal.Title>
+          <h4>Delete Photo</h4>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           <div className="d-flex flex-column">
-            <FormLabel>
-              <b>Are you sure you want to delete this Photo?</b>
+            <FormLabel className="d-flex">
+              <h5>Are you sure you want to delete this Photo?</h5>
             </FormLabel>
             <Image
               className="deletePropPhoto"
