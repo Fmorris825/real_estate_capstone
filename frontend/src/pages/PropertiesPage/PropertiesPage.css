@@ -55,11 +55,13 @@
   align-items: center;
   margin: 15px;
   gap: 5px;
+  font-size: 15px;
 }
 
 .img-info {
   margin: 10px;
   margin-top: 20px;
+  height: 250px;
 }
 
 .card-bottom-liner b {

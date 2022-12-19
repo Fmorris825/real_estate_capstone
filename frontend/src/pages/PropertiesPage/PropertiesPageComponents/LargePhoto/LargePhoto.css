@@ -1,9 +1,10 @@
 .largePhoto {
   width: 475px;
   height: 475px;
-  box-shadow: 6px 6px 5px lightgray;
+  box-shadow: 6px 6px 5px gray;
   border-radius: 3px;
   margin: 10px;
+  border: 1px solid #041e42;
 }
 
 .largePlaceHolderText {

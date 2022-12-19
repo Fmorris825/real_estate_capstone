@@ -39,6 +39,7 @@ function App() {
         <Route path="/properties" element={<PropertiesPage />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
+
       <Footer />
     </div>
   );

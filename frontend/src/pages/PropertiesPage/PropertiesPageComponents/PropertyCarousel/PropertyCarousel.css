@@ -10,4 +10,12 @@
   height: 600px;
   object-fit: cover;
   border-radius: 4px;
+  opacity: 85%;
+}
+
+.carouseltext {
+  text-shadow: 2px 2px 4px whitesmoke;
+  color: #041e42;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 35px;
 }

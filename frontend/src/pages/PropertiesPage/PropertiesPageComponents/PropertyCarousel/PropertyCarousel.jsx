@@ -31,8 +31,10 @@ const PropertyCarousel = () => {
                 alt={property.address}
               />
               <Carousel.Caption>
-                <h3>{property.address}</h3>
-                <p>{property.description}</p>
+                <h3 className="carouseltext">
+                  {property.address}, {property.city}
+                </h3>
+                <p className="carouseltext"> {property.description}</p>
               </Carousel.Caption>
             </CarouselItem>
           );

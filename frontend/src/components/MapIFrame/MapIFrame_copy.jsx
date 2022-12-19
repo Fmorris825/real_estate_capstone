@@ -23,7 +23,7 @@ const MapIFrameCopy = () => {
       <div>
         <ul className="d-flex flex-column mapslist">
           <li>
-            Use the map to search addresses or vities to see the local
+            Use the map to search addresses or cities to see the local
             neighborhoods.
           </li>
           <li>

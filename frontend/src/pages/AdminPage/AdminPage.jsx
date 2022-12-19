@@ -6,10 +6,10 @@ import { Container } from "react-bootstrap";
 
 const AdminPage = () => {
   return (
-    <Container className="d-flex align-items-center justify-content-center flex-column">
+    <div className="d-flex justify-content-around">
       <AddPropertyForm />
       <AddPhotoForm />
-    </Container>
+    </div>
   );
 };
 

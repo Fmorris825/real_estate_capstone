@@ -14,6 +14,7 @@ import axios from "axios";
 import CommentAlert from "../CommentAlert/CommentAlert";
 import MapsKey from "../../../MapsKey";
 import EmailValidatorStatement from "../../EmailValidatorStatement/EmailValidatorStatement";
+import "./ContactUsForm.css";
 
 const ContactUsForm = ({ handleCloseForm }) => {
   const [firstName, setFirstName] = useState("");
@@ -108,9 +109,14 @@ const ContactUsForm = ({ handleCloseForm }) => {
           </FormGroup>
           <FormGroup>
             <FormLabel>Inquiry:</FormLabel>
-
+            <br />
+            <Form.Text className="text-muted">
+              Please Include Property Ref #:
+              <br />
+              Found at bottom of Property Viewer on Properties Page.
+            </Form.Text>
             <FormControl
-              className="shadow-sm p-1 mb-1 bg-body rounded"
+              className="shadow-sm p-1 mb-1 bg-body rounded inquiryinput"
               type="text"
               onChange={(event) => setInquiry(event.target.value)}
               value={inquiry}

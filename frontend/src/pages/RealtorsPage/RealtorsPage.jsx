@@ -6,7 +6,9 @@ const RealtorsPage = () => {
   return (
     <div>
       <MorrisDeltaHeader />
-      <RealtorsContainer />
+      <div className="bodyBackground">
+        <RealtorsContainer />
+      </div>
     </div>
   );
 };
