@@ -12,19 +12,7 @@ li {
   background: steelblue;
   box-shadow: 4px 2px 5px gray;
   color: white;
-  padding: 1.5rem 2rem;
-}
-
-.navBar button {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
-.navBar button:hover {
-  background: white;
-  color: steelblue;
-  cursor: pointer;
+  padding: 10px;
 }
 
 .brand {
@@ -51,4 +39,10 @@ li {
   text-shadow: 2px 2px 4px black;
   font-weight: 500;
   font-size: 40px;
+}
+
+.navbutton:hover {
+  background: #041e42;
+  color: #041e42;
+  cursor: pointer;
 }

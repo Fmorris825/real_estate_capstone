@@ -1,4 +1,11 @@
 .map {
-  margin: 50px;
+  margin: 10px 50px 50px 50px;
   box-shadow: 6px 6px 5px gray;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+}
+
+.mapbtn {
+  color: #041e42;
+  border-color: #041e42;
 }

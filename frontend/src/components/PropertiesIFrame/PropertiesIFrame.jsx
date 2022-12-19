@@ -8,15 +8,32 @@ import {
 import { useState } from "react";
 import "./PropertiesIFrame.css";
 
-const PropertiesIFrame = ({ selectedProperty }) => {
+const PropertiesIFrame = ({ selectedProperty, setSelectedProperty }) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyDVQhEP2okcXMH9fvHlVpWAzbowx5-ZWZs",
     libraries: ["places"],
   });
 
+  function handleClear() {
+    setSelectedProperty("");
+  }
   if (!isLoaded) return <div>Loading...</div>;
   return (
-    <div>
+    <div className="d-flex flex-column">
+      <div>
+        <ul className="d-flex flex-column">
+          <li>
+            Use the map to search addresses or vities to see the local
+            neighborhoods.
+          </li>
+          <li>
+            Click on one of the properties below to search for those addresses.
+          </li>
+        </ul>
+      </div>
+      <div className="d-flex justify-content-center mapbtn">
+        <button onClick={handleClear}>Clear Map Search</button>
+      </div>
       <Map selectedProperty={selectedProperty} />;
     </div>
   );

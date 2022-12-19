@@ -6,6 +6,7 @@ import {
 } from "@react-google-maps/api";
 
 import { useState } from "react";
+import "./MapIFrame_copy.css";
 
 const MapIFrameCopy = () => {
   const { isLoaded } = useLoadScript({
@@ -14,7 +15,27 @@ const MapIFrameCopy = () => {
   });
 
   if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
+  return (
+    <div className="d-flex flex-column">
+      <div className="d-flex">
+        <h4 className="propertyheader m-3">Neighboorhood Viewer</h4>
+      </div>
+      <div>
+        <ul className="d-flex flex-column mapslist">
+          <li>
+            Use the map to search addresses or vities to see the local
+            neighborhoods.
+          </li>
+          <li>
+            Click on one of the properties below to search for those addresses.
+          </li>
+        </ul>
+      </div>
+      <div className="d-flex justify-content-center">
+        <Map />;
+      </div>
+    </div>
+  );
 };
 
 const Map = () => {
@@ -68,7 +89,7 @@ const Map = () => {
           >
             <input
               type="text"
-              placeholder="Customized your placeholder"
+              placeholder="Enter Address Here"
               style={{
                 boxSizing: `border-box`,
                 border: `1px solid transparent`,

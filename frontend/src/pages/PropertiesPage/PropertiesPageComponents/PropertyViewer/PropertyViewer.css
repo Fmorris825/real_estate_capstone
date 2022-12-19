@@ -5,9 +5,9 @@
 }
 
 .propertyViewer {
-  border: 1px solid lightgray;
+  border: 1px solid #041e42;
   border-radius: 5px;
-  box-shadow: 7px 7px 5px lightgray;
+  box-shadow: 7px 7px 5px gray;
   margin: 35px;
   width: 1200px;
 }

@@ -19,17 +19,18 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: 2px solid navy;
+  color: navy;
   font-size: 1rem;
   font-family: inherit;
   padding: 5px;
+  border-radius: 2px;
 }
 
 button:hover {
   cursor: pointer;
   color: white;
-  background-color: steelblue;
+  background-color: #041e42;
 }
 
 .container {

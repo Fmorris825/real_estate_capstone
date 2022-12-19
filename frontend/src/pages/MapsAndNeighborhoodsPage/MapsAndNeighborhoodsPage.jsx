@@ -22,7 +22,10 @@ const MapsAndNeighborsHoods = () => {
   return selectedProperty ? (
     <div>
       <MorrisDeltaHeader />
-      <GoogleMapsContainer selectedProperty={selectedProperty} />{" "}
+      <GoogleMapsContainer
+        selectedProperty={selectedProperty}
+        setSelectedProperty={setSelectedProperty}
+      />{" "}
       <PropertyList
         properties={properties}
         setSelectedProperty={setSelectedProperty}
@@ -30,7 +33,7 @@ const MapsAndNeighborsHoods = () => {
       />
     </div>
   ) : (
-    <div className="d-flex flex-column align-items-center">
+    <div>
       <MorrisDeltaHeader />
       <MapIFrameCopy />
       <PropertyList
