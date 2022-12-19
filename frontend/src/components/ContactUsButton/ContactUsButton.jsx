@@ -24,7 +24,7 @@ const ContactUsButton = () => {
           <h6>Contact Us</h6>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <ContactUsForm />
+          <ContactUsForm handleCloseForm={handleClose} />
         </Offcanvas.Body>
       </Offcanvas>
     </>

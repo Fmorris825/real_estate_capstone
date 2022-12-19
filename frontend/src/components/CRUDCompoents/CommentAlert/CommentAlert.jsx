@@ -4,8 +4,11 @@ import Modal from "react-bootstrap/Modal";
 import { Button } from "bootstrap";
 import { ModalFooter } from "react-bootstrap";
 
-const CommentAlert = ({ show, setShow }) => {
-  const handleClose = () => setShow(false);
+const CommentAlert = ({ show, setShow, handleCloseForm }) => {
+  function handleClose() {
+    setShow(false);
+    handleCloseForm();
+  }
   const handleShow = () => setShow(true);
   return show ? (
     <Modal
@@ -23,11 +26,14 @@ const CommentAlert = ({ show, setShow }) => {
           Your inquiry has been successfully submitted. We look forward to
           answering your inquiry and will respond at our next availabe moment.
         </p>
+
+        <p>- Thank You !</p>
       </Modal.Body>
-      <ModalFooter>- Thank You !</ModalFooter>
-      <button variant="secondary" onClick={handleClose}>
-        Close
-      </button>
+      <ModalFooter>
+        <button className="m-2" onClick={handleClose}>
+          Close
+        </button>
+      </ModalFooter>
     </Modal>
   ) : null;
 };

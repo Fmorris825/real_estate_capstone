@@ -15,7 +15,7 @@ import CommentAlert from "../CommentAlert/CommentAlert";
 import MapsKey from "../../../MapsKey";
 import EmailValidatorStatement from "../../EmailValidatorStatement/EmailValidatorStatement";
 
-const ContactUsForm = () => {
+const ContactUsForm = ({ handleCloseForm }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -123,7 +123,11 @@ const ContactUsForm = () => {
           </Button>
         </Container>
       </Form>
-      <CommentAlert show={show} setShow={setShow} />
+      <CommentAlert
+        show={show}
+        setShow={setShow}
+        handleCloseForm={handleCloseForm}
+      />
     </div>
   );
 };
