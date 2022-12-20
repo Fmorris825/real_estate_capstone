@@ -18,7 +18,7 @@ const MapIFrameCopy = () => {
   return (
     <div className="d-flex flex-column">
       <div className="d-flex">
-        <h4 className="propertyheader m-3">Neighboorhood Viewer</h4>
+        <h4 className="propertyheader">Neighboorhood Viewer</h4>
       </div>
       <div>
         <ul className="d-flex flex-column mapslist">

@@ -19,18 +19,7 @@ const PropertiesIFrame = ({ selectedProperty, setSelectedProperty }) => {
   }
   if (!isLoaded) return <div>Loading...</div>;
   return (
-    <div className="d-flex flex-column">
-      <div>
-        <ul className="d-flex flex-column">
-          <li>
-            Use the map to search addresses or cities to see the local
-            neighborhoods.
-          </li>
-          <li>
-            Click on one of the properties below to search for those addresses.
-          </li>
-        </ul>
-      </div>
+    <div>
       <div className="d-flex justify-content-center mapbtn">
         <button onClick={handleClear}>Clear Map Search</button>
       </div>
