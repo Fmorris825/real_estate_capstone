@@ -18,6 +18,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.client_comment_library ),
-    path('<int:pk>', views.get_client_comment_by_id )
+    path('', views.skill_library ),
+    path('<int:pk>', views.skill_by_id )
 ]

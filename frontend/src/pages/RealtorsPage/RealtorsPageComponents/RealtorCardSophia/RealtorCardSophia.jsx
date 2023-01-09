@@ -17,7 +17,7 @@ const RealtorCardSophia = () => {
         <Col>
           <div>
             <h4>Sophia Morris</h4>
-            <p className="subheader">Expertise: Residential Specilist </p>
+            <p className="subheader">Expertise: Residential Specialist </p>
           </div>
 
           <p>
