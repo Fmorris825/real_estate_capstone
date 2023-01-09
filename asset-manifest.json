@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38ed1e23.css",
+    "main.js": "/static/js/main.fd9fd4e9.js",
+    "static/media/MalePortrait.jpg": "/static/media/MalePortrait.b9eaf5275f642be67369.jpg",
+    "static/media/Dallas.jpg": "/static/media/Dallas.3518134ee508b4d4fa4b.jpg",
+    "static/media/DDD.jpg": "/static/media/DDD.d8db0b9e97c36ad6c8b0.jpg",
+    "static/media/FemalePortrait.jpg": "/static/media/FemalePortrait.0f41c784d1af904ce16a.jpg",
+    "index.html": "/index.html",
+    "main.38ed1e23.css.map": "/static/css/main.38ed1e23.css.map",
+    "main.fd9fd4e9.js.map": "/static/js/main.fd9fd4e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38ed1e23.css",
+    "static/js/main.fd9fd4e9.js"
+  ]
+}
