@@ -12,7 +12,15 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def photo_library(request,pk):
+def photo_library(request):
+    if request.method == 'GET':
+        photos = Photo.objects.all()
+        serializer = PhotoSerializer(photos, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def photo_by_property(request,pk):
     property = Property.objects.get(id=pk)
     if request.method == 'GET':
         photos = Photo.objects.filter(property=property)

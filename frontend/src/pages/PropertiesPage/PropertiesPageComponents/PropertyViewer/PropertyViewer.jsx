@@ -6,6 +6,7 @@ import ImageCardViewer from "../ImageCardViewer/ImageCardViewer";
 import LargePhoto from "../LargePhoto/LargePhoto";
 import { Col, Container } from "react-bootstrap";
 import EditRender from "../../../../components/CRUDCompoents/EditRender/EditRender";
+import Database from "../../../../Database";
 
 const PropertyViewer = ({
   selectedProperty,
@@ -15,16 +16,21 @@ const PropertyViewer = ({
 }) => {
   const [photos, setPhotos] = useState(false);
 
-  useEffect(() => {
-    getPhotosForProperties();
-  }, [selectedProperty]);
+  // useEffect(() => {
+  //   getPhotosForProperties();
+  // }, [selectedProperty]);
 
-  async function getPhotosForProperties() {
-    const response = await axios.get(
-      `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/photos/`
-    );
-    setPhotos(response.data);
-  }
+  useEffect(() => {
+    setPhotos(Database.photos);
+  }, []);
+
+  // async function getPhotosForProperties() {
+  //   const response = await axios.get(
+  //     `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/photos/`
+  //   );
+  //   setPhotos(response.data);
+  // }
+
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
       <div className="d-flex flex-column m-1 thumbnailContainer">
@@ -60,7 +66,7 @@ const PropertyViewer = ({
           selectedProperty={selectedProperty}
           getProperties={getProperties}
           selectedPhoto={selectedPhoto}
-          getPhotosForProperties={getPhotosForProperties}
+          // getPhotosForProperties={getPhotosForProperties}
         />
       </div>
     </div>

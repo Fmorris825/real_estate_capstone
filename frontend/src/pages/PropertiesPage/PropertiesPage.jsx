@@ -7,14 +7,19 @@ import PropertyViewer from "./PropertiesPageComponents/PropertyViewer/PropertyVi
 import { Container } from "react-bootstrap";
 import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame";
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
+import Database from "../../Database";
 
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
   const [selectedProperty, setSelectedProperty] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(false);
 
+  // useEffect(() => {
+  //   getProperties();
+  // }, []);
+
   useEffect(() => {
-    getProperties();
+    setProperties(Database.properties);
   }, []);
 
   async function getProperties() {

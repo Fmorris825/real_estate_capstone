@@ -5,18 +5,19 @@ import axios from "axios";
 import CarouselItem from "react-bootstrap/esm/CarouselItem";
 import PropertySlide from "../PropertySlide/PropertySlide";
 import "./PropertyCarousel.css";
+import Database from "../../../../Database";
 
 const PropertyCarousel = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    getProperties();
+    setProperties(Database.properties);
   }, []);
 
-  async function getProperties() {
-    const response = await axios.get("http://127.0.0.1:8000/api/properties/");
-    setProperties(response.data);
-  }
+  // async function getProperties() {
+  //   const response = await axios.get("http://127.0.0.1:8000/api/properties/");
+  //   setProperties(response.data);
+  // }
 
   if (!properties) return null;
   return (

@@ -18,7 +18,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.photo_library ),
-    path('<int:pk>/', views.post_photo ),
+    path('', views.photo_by_property ),
+    path('photos/', views.photo_by_property ),
+    path('<int:pk>/post/', views.post_photo, ),
     path('delete/<int:pk>/', views.get_photo_by_id)
 ]
