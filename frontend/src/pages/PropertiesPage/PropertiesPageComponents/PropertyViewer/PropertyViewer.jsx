@@ -16,20 +16,20 @@ const PropertyViewer = ({
 }) => {
   const [photos, setPhotos] = useState(false);
 
-  // useEffect(() => {
-  //   getPhotosForProperties();
-  // }, [selectedProperty]);
-
   useEffect(() => {
-    setPhotos(Database.photos);
-  }, []);
+    getPhotosForProperties();
+  }, [selectedProperty]);
 
-  // async function getPhotosForProperties() {
-  //   const response = await axios.get(
-  //     `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/photos/`
-  //   );
-  //   setPhotos(response.data);
-  // }
+  // useEffect(() => {
+  //   setPhotos(Database.photos);
+  // }, []);
+
+  async function getPhotosForProperties() {
+    const response = await axios.get(
+      `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/photos/`
+    );
+    setPhotos(response.data);
+  }
 
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
