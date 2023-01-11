@@ -9,7 +9,7 @@ from .models import Client_Comment
 
 
 @api_view(['GET', 'POST'])
-def client_comment_library(request):
+def skill_library(request):
     if request.method == 'GET':
         comments = Client_Comment.objects.all()
         serializer = Client_CommentSerializer(comments, many=True)
@@ -21,7 +21,7 @@ def client_comment_library(request):
         return Response(serializer.errors, status=status.HTTP_201_CREATED)
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def get_client_comment_by_id(request, pk):
+def skill_by_id(request, pk):
     comment = get_object_or_404(Client_Comment, pk=pk)
     if request.method == 'GET':
         serializer = Client_CommentSerializer(comment)

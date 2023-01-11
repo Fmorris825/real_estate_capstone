@@ -11,7 +11,7 @@ const RealtorCardDavid = () => {
         <Col>
           <div>
             <h4>David Vernon</h4>
-            <p className="subheader">Expertise: Commercial Specilist </p>
+            <p className="subheader">Expertise: Commercial Specialist </p>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
